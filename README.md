@@ -1,1 +1,16 @@
-# Data-structure-pratical-program-19
+# Example for Binary Search
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+# Example usage
+arr = [1, 3, 5, 7, 9]
+print(binary_search(arr, 5))  # Output: 2# Data-structure-pratical-program-19
